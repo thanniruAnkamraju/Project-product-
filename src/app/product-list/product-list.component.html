@@ -1,0 +1,26 @@
+<h2> ProductList</h2>
+ <table  class="table -striped">
+    <thead>
+
+        
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+    
+    </thead>
+    <tbody>
+        <tr *ngFor ="let product of product">
+           
+            
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+    <td>
+        <button (click)="updateProduct(product.id)" class="btn btn-info"> <i class="fa fa-pencil"style="font-size:20px;color:white"></i></button>&nbsp; 
+ 
+        <button (click)="deleteProduct(product.id)" class="btn "><i class="fa fa-trash"style="font-size:20px;color:red"></i> </button> 
+        
+    </td>
+        </tr>
+    </tbody>
+
+ </table>
